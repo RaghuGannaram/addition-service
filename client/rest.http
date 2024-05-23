@@ -1,9 +1,25 @@
+########################################## local instance
 ###  health check
 GET http://localhost:5001/health-check HTTP/1.1
 
 
 ### addition
 POST http://localhost:5001/api/v1/addition HTTP/1.1
+Content-Type: application/json
+
+{
+    "number1": "100",
+    "number2": 20
+}
+
+
+############################################## container instance
+###  health check
+GET http://localhost:9001/health-check HTTP/1.1
+
+
+### addition
+POST http://localhost:9001/api/v1/addition HTTP/1.1
 Content-Type: application/json
 
 {
