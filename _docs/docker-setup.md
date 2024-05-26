@@ -11,6 +11,7 @@ docker container run \
 > --publish 9001:9001 \
 > --network calculation-microservices-network \
 > --env LOG_LEVEL=debug \
+> --mount type=bind,source="$(pwd)/Docker/logs",target=/app/logs \
 > raghugannaram/addition-service:1.0.0
 
 ```
